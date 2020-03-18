@@ -337,6 +337,7 @@
         
           
             <h1 id="MarkDown-语法学习"><a href="#MarkDown-语法学习" class="headerlink" title="MarkDown 语法学习"></a>MarkDown 语法学习</h1><p>这是我关于 <code>MarkDown</code> 语法的一些总结</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
 <h2 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h2><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><hr>
 <p>Markdown 中通过符号 <code>#</code> 来标明标题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">...(以此类推)</span><br></pre></td></tr></table></figure>
@@ -356,7 +357,7 @@
 <blockquote>
 <p>​       <u>问题的关键究竟为何？  生活中，若<strong>Markdown</strong>出现了，我们就不得不考虑它出现了的事实。 经过上述讨论， 那么， 一般来说， 问题的关键究竟为何？</u>  <strong>Markdown</strong>，发生了会如何，不发生又会如何。 拿破仑·希尔曾经说过，不要等待，时机永远不会恰到好处。这启发了我，  康德在不经意间这样说过，<em>既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。</em>这启发了我，  <strong>Markdown</strong>的发生，到底需要如何做到，不<strong>Markdow</strong>的发生，又会如何产生。 <del>我们都知道，只要有意义，那么就必须慎重考虑。  在这种困难的抉择下，本人思来想去，寝食难安。 生活中，若<strong>Markdown</strong>出现了，我们就不得不考虑它出现了的事实。</del><br>​          所谓<strong>Markdown</strong>，关键是<strong>Markdown</strong>需要如何写。  这种事实对本人来说意义重大，相信对<strong><em>这个世界</em></strong>也是有一定意义的。 那么， 那么， 在这种困难的抉择下，本人思来想去，寝食难安。  一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚<a href="一种优雅而高效的语言">^Markdown</a>到底是一种怎么样的存在，是解决一切问题的关键。  达尔文在不经意间这样说过，敢于浪费哪怕一个钟头时间的人，说明他还不懂得珍惜生命的全部价值。带着这句话，我们还要更加慎重的审视这个问题。 </p>
 </blockquote>
-<p>在Markdown中对文字可以进行<strong>加粗</strong>、<em>斜体</em>、<u>下划线</u>、<del>删除线</del>、<a href="脚注显示的文本">^脚注</a> 的处理，格式如下:</p>
+<p>在Markdown中对文字可以进行<strong>加粗</strong>、<em>斜体</em>、<u>下划线</u>、<del>删除线</del>、脚注[^1] 的处理，格式如下:<br>[^1]:Demo</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">**加粗文本**</span><br><span class="line">*斜体文本*</span><br><span class="line">***加粗斜体文本***</span><br><span class="line">~~删除文本~~</span><br><span class="line">&lt;u&gt;下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
 
 
@@ -413,8 +414,57 @@
 <li>项目</li>
 </ol>
 <h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><hr>
+<p>Markdown 支持表格的绘制，绘制表格如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| name     |  ID  | Score |</span><br><span class="line">| :------- | :--: | ----: |</span><br><span class="line">| xiaoming |  01  |    95 |</span><br><span class="line">| Lihua    |  02  |    97 |</span><br><span class="line">| Lowrie   |  03  |   100 |</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="center">ID</th>
+<th align="right">Score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">xiaoming</td>
+<td align="center">01</td>
+<td align="right">95</td>
+</tr>
+<tr>
+<td align="left">Lihua</td>
+<td align="center">02</td>
+<td align="right">97</td>
+</tr>
+<tr>
+<td align="left">Lowrie</td>
+<td align="center">03</td>
+<td align="right">100</td>
+</tr>
+</tbody></table>
+<p>表格对齐方式方法：</p>
+<ul>
+<li>左对齐：    |:—-|</li>
+<li>右对齐：    |—-:|</li>
+<li>居中对齐：  |:—:|</li>
+</ul>
 <h4 id="图片-amp-链接"><a href="#图片-amp-链接" class="headerlink" title="图片&amp;链接"></a>图片&amp;链接</h4><hr>
-<h2 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h2>
+<h5 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h5><p>Markdown中插入链接可以使用 <code>[链接名称](url&quot;描述&quot;)</code> 的形式来插入链接，<code>url</code> 可以是http链接或者是本地文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Blog.lowrie.club](Blog.lowrie.club&quot;点我跳转&quot;)</span><br><span class="line">[这里](Blog.lowrie.club&quot;博客主页&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.lowrie.club" target="_blank" rel="noopener" title="点我跳转">Blog.lowrie.club</a><br>点击这里<a href="http://blog.lowrie.club" target="_blank" rel="noopener" title="博客主页">这里</a>进入博客主页</p>
+<p>链接也可以写成脚注的形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[进入主页][1]</span><br><span class="line">点击后面的链接以打开网站[链接]</span><br><span class="line">[1]:http:&#x2F;&#x2F;blog.lowrie.club</span><br><span class="line">[链接]:http:&#x2F;&#x2F;blog.lowrie.club</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.lowrie.club" target="_blank" rel="noopener" title="Lowrie博客主页">进入主页</a><br>点击后面的链接以打开网站<a href="http://blog.lowrie.club" target="_blank" rel="noopener" title="点击进入">链接</a></p>
+<h5 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h5><p>形式和链接相同，只不过在前面加上 <code>!</code> 符号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![imgs](..&#x2F;..&#x2F;public&#x2F;images&#x2F;favicon-16x16-next.png &quot;Lowrie&quot;) &lt;-- This is a 16x16 Lowrie icon</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../public/images/favicon-16x16-next.png" alt="Lowrie_logo" title="Lowrie"> This is a 16x16 Lowrie icon</p>
+<p>Markdown插入的图片不能指定图片尺寸，但可以通过使用html标签 <code>&lt;img&gt;</code> 来自定义插入的图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;avatars1.githubusercontent.com&#x2F;u&#x2F;36433791?s&#x3D;460&amp;u&#x3D;bb4403b92bbc26691a9892d03548323e735ee341&amp;v&#x3D;4&quot; style&#x3D;&quot;height: 80px;&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://avatars1.githubusercontent.com/u/36433791?s=460&u=bb4403b92bbc26691a9892d03548323e735ee341&v=4" style="height: 80px;"/> this should be my Github account avatar</p>
+<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2>
           
         
       
